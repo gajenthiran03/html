@@ -1,0 +1,204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Automatapi | Access Management</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}" />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+
+    <style>
+      .header-title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .header-title h1 {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .header-title img {
+        height: 40px;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+
+      .form-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .button-group {
+        grid-column: span 3;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .button-group button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body class="hold-transition">
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="header-title">
+        <h1>Automatapi</h1>
+        <img
+          src="{% static 'dist/img/clubmahindra-logo.png' %}"
+          alt="Club Mahindra Logo"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="form-section">
+        <h2 class="form-title">Access Management (Create Activity)</h2>
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" />
+            </div>
+
+            <div class="form-group">
+              <label for="locationType">Location Type</label>
+              <input type="text" id="locationType" name="locationType" />
+            </div>
+
+            <div class="form-group">
+              <label for="locationText">Location Text</label>
+              <input type="text" id="locationText" name="locationText" />
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input type="text" id="department" name="department" />
+            </div>
+
+            <div class="form-group">
+              <label for="designation">Designation</label>
+              <input type="text" id="designation" name="designation" />
+            </div>
+
+            <div class="form-group">
+              <label for="doj">Date of Joining</label>
+              <input type="date" id="doj" name="doj" />
+            </div>
+
+            <div class="form-group">
+              <label for="validityPeriod">Validity Period (Months)</label>
+              <input type="number" id="validityPeriod" name="validityPeriod" />
+            </div>
+
+            <div class="form-group">
+              <label for="mobileNo">Mobile No</label>
+              <input type="text" id="mobileNo" name="mobileNo" />
+            </div>
+
+            <div class="form-group">
+              <label for="reportingManager">Reporting Manager Email ID</label>
+              <input
+                type="email"
+                id="reportingManager"
+                name="reportingManager"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="vendorName">Vendor Name</label>
+              <input type="text" id="vendorName" name="vendorName" />
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <input type="text" id="category" name="category" />
+            </div>
+
+            <div class="form-group">
+              <label for="piflowInputFlow">Piflow Input Flow</label>
+              <select id="piflowInputFlow" name="piflowInputFlow">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="form-group">
+              <label for="proofUpload">Proof Upload</label>
+              <input type="file" id="proofUpload" name="proofUpload" />
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-secondary">Save</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- REQUIRED SCRIPTS -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+  </body>
+</html>
