@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Automatapi | Access Management</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}" />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+
+    <style>
+      .header-title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+      }
+      .header-title h1 {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      .header-title img {
+        height: 40px;
+      }
+      .form-section {
+        padding: 20px;
+      }
+      .form-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .button-group {
+        grid-column: span 3;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+      .button-group button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-header">15 Notifications</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"
+                >See All Notifications</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link">
+          <img
+            src="{% static 'dist/img/AdminLTELogo.png' %}"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">Automatapi</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="{% static 'dist/img/user2-160x160.jpg' %}"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Alexander Pierce</a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>Simple Link</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Access Management (Create Activity)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="form-section">
+              <form>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" />
+                  </div>
+                  <div class="form-group">
+                    <label for="locationType">Location Type</label>
+                    <input type="text" id="locationType" name="locationType" />
+                  </div>
+                  <div class="form-group">
+                    <label for="locationText">Location Text</label>
+                    <input type="text" id="locationText" name="locationText" />
+                  </div>
+                  <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department" />
+                  </div>
+                  <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation" name="designation" />
+                  </div>
+                  <div class="form-group">
+                    <label for="doj">Date of Joining</label>
+                    <input type="date" id="doj" name="doj" />
+                  </div>
+                  <div class="form-group">
+                    <label for="validityPeriod">Validity Period (Months)</label>
+                    <input
+                      type="number"
+                      id="validityPeriod"
+                      name="validityPeriod"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="mobileNo">Mobile No</label>
+                    <input type="text" id="mobileNo" name="mobileNo" />
+                  </div>
+                  <div class="form-group">
+                    <label for="reportingManager"
+                      >Reporting Manager Email ID</label
+                    >
+                    <input
+                      type="email"
+                      id="reportingManager"
+                      name="reportingManager"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="vendorName">Vendor Name</label>
+                    <input type="text" id="vendorName" name="vendorName" />
+                  </div>
+                  <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" />
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" />
+                  </div>
+                  <div class="form-group">
+                    <label for="piflowInputFlow">Piflow Input Flow</label>
+                    <select id="piflowInputFlow" name="piflowInputFlow">
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" />
+                  </div>
+                  <div class="form-group">
+                    <label for="proofUpload">Proof Upload</label>
+                    <input type="file" id="proofUpload" name="proofUpload" />
+                  </div>
+
+                  <div class="button-group">
+                    <button type="button" class="btn btn-secondary">
+                      Save
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-inline">Anything you want</div>
+      </footer>
+    </div>
+  </body>
+</html>
